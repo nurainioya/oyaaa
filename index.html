@@ -1,0 +1,309 @@
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GlowStore - Toko Skincare</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans pt-14">
+
+  <a id="top"></a>
+
+  <!-- Navbar -->
+<header class="fixed top-0 left-0 w-full z-50 bg-pink-100/80 backdrop-blur shadow-md">
+  <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+
+    <!-- Logo -->
+    <h1 class="text-2xl font-bold text-pink-600"><i class="fas fa-sun mr-2"></i>Skintific</h1>
+
+    <!-- Menu Desktop -->
+    <nav class="hidden md:flex space-x-8 text-base font-semibold">
+      <a href="#top" class="group relative text-pink-700 hover:text-pink-600 transition duration-300">
+        <span class="flex items-center gap-2">
+          <i class="fas fa-home"></i> Beranda
+        </span>
+        <span class="absolute left-0 bottom-0 w-0 h-0.5 bg-pink-600 transition-all group-hover:w-full"></span>
+      </a>
+      <a href="#produk" class="group relative text-pink-700 hover:text-pink-600 transition duration-300">
+        <span class="flex items-center gap-2">
+          <i class="fas fa-box-open"></i> Produk
+        </span>
+        <span class="absolute left-0 bottom-0 w-0 h-0.5 bg-pink-600 transition-all group-hover:w-full"></span>
+      </a>
+      <a href="#ulasan" class="group relative text-pink-700 hover:text-pink-600 transition duration-300">
+        <span class="flex items-center gap-2">
+          <i class="fas fa-comments"></i> Ulasan
+        </span>
+        <span class="absolute left-0 bottom-0 w-0 h-0.5 bg-pink-600 transition-all group-hover:w-full"></span>
+      </a>
+      <a href="#kontak" class="group relative text-pink-700 hover:text-pink-600 transition duration-300">
+        <span class="flex items-center gap-2">
+          <i class="fas fa-envelope"></i> Kontak
+        </span>
+        <span class="absolute left-0 bottom-0 w-0 h-0.5 bg-pink-600 transition-all group-hover:w-full"></span>
+      </a>
+    </nav>
+
+    <!-- Hamburger Menu Mobile -->
+    <div class="md:hidden">
+      <button id="menuBtn" class="text-pink-500 hover:text-pink-700 focus:outline-none text-xl">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="hidden md:hidden px-4 pb-4 bg-pink-50 shadow-md">
+    <a href="#top" class="flex items-center gap-3 py-2 text-pink-500 hover:text-pink-700 font-medium">
+      <i class="fas fa-home"></i> Beranda
+    </a>
+    <a href="#produk" class="flex items-center gap-3 py-2 text-pink-400 hover:text-pink-700 font-medium">
+      <i class="fas fa-box-open"></i> Produk
+    </a>
+    <a href="#ulasan" class="flex items-center gap-3 py-2 text-pink-400 hover:text-pink-700 font-medium">
+      <i class="fas fa-comments"></i> Ulasan
+    </a>
+    <a href="#kontak" class="flex items-center gap-3 py-2 text-pink-400 hover:text-pink-700 font-medium">
+      <i class="fas fa-envelope"></i> Kontak
+    </a>
+  </div>
+</header>
+
+  <!-- Hero Section -->
+  <section class="py-16 bg-gradient-to-b from-pink-50 to-white">
+  <div class="max-w-6xl mx-auto px-4 text-center">
+    <h3 class="text-3xl font-bold text-pink-600 mb-4">Kenapa Memilih Skintific?</h3>
+    <p class="text-gray-700 text-lg mb-10 max-w-2xl mx-auto">
+      Skincare dengan pendekatan ilmiah. Formulasi klinis, bahan aktif teruji, dan hasil nyata untuk semua jenis kulit.
+    </p>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      
+      <div class="bg-white rounded-xl p-6 shadow hover:shadow-lg transition duration-300">
+        <div class="flex items-center justify-center w-16 h-16 mx-auto bg-pink-100 text-pink-600 rounded-full mb-4 text-2xl">
+          <i class="fas fa-flask"></i>
+        </div>
+        <h4 class="text-lg font-semibold text-gray-800 mb-2">Formula Ilmiah</h4>
+        <p class="text-sm text-gray-600">Dikembangkan oleh tim ahli dengan pendekatan riset dan teknologi dermatologis.</p>
+      </div>
+
+      <div class="bg-white rounded-xl p-6 shadow hover:shadow-lg transition duration-300">
+        <div class="flex items-center justify-center w-16 h-16 mx-auto bg-pink-100 text-pink-600 rounded-full mb-4 text-2xl">
+          <i class="fas fa-seedling"></i>
+        </div>
+        <h4 class="text-lg font-semibold text-gray-800 mb-2">Aman & Lembut</h4>
+        <p class="text-sm text-gray-600">Cocok untuk kulit sensitif, bebas alkohol, paraben, dan pewangi buatan.</p>
+      </div>
+
+      <div class="bg-white rounded-xl p-6 shadow hover:shadow-lg transition duration-300">
+        <div class="flex items-center justify-center w-16 h-16 mx-auto bg-pink-100 text-pink-600 rounded-full mb-4 text-2xl">
+          <i class="fas fa-check-circle"></i>
+        </div>
+        <h4 class="text-lg font-semibold text-gray-800 mb-2">Terbukti Efektif</h4>
+        <p class="text-sm text-gray-600">Teruji secara klinis memberikan hasil nyata untuk berbagai masalah kulit.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+ <script>
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+  menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+  });
+  document.querySelectorAll("#mobileMenu a").forEach(link => {
+    link.addEventListener("click", () => {
+      mobileMenu.classList.add("hidden");
+    });
+  });
+</script>
+
+  <!-- Produk Section -->
+  <section id="produk" class="py-12">
+    <div class="max-w-6xl mx-auto px-4">
+      <h3 class="text-2xl font-semibold mb-6 text-center text-pink-600">Produk Skincare</h3>
+      <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
+
+        <!-- Produk 1 -->
+        <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition transform hover:-translate-y-1">
+          <div class="h-60 flex items-center justify-center bg-white">
+            <img src="1.png" alt="Brightening Serum" class="max-h-full object-contain" />
+          </div>
+          <div class="p-5">
+            <h4 class="font-semibold text-lg mb-2">Brightening Serum</h4>
+            <p class="text-sm text-gray-600 mb-4">Serum vitamin C untuk kulit cerah dan bebas kusam.</p>
+            <div class="flex justify-between items-center">
+              <span class="text-pink-600 font-bold">Rp 150.000</span>
+              <button class="bg-pink-500 text-white px-4 py-2 rounded hover:bg-pink-700 transition">Beli <i class="fas fa-shopping-cart ml-2"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Produk 2 -->
+        <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition transform hover:-translate-y-1">
+          <div class="h-60 flex items-center justify-center bg-white">
+            <img src="2.png" alt="Gentle Face Wash" class="max-h-full object-contain" />
+          </div>
+          <div class="p-5">
+            <h4 class="font-semibold text-lg mb-2">Gentle Face Wash</h4>
+            <p class="text-sm text-gray-600 mb-4">Sabun wajah lembut untuk kulit bersih dan segar.</p>
+            <div class="flex justify-between items-center">
+              <span class="text-pink-600 font-bold">Rp 75.000</span>
+              <button class="bg-pink-500 text-white px-4 py-2 rounded hover:bg-pink-700 transition">Beli <i class="fas fa-shopping-cart ml-2"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Produk 3 -->
+        <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition transform hover:-translate-y-1">
+          <div class="h-60 flex items-center justify-center bg-white">
+            <img src="3.jpeg" alt="Hydrating Moisturizer" class="max-h-full object-contain" />
+          </div>
+          <div class="p-5">
+            <h4 class="font-semibold text-lg mb-2">Hydrating Moisturizer</h4>
+            <p class="text-sm text-gray-600 mb-4">Menjaga kelembapan kulit wajah sepanjang hari.</p>
+            <div class="flex justify-between items-center">
+              <span class="text-pink-600 font-bold">Rp 130.000</span>
+              <button class="bg-pink-500 text-white px-4 py-2 rounded hover:bg-pink-700 transition">Beli <i class="fas fa-shopping-cart ml-2"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Produk 4 -->
+        <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition transform hover:-translate-y-1">
+          <div class="h-60 flex items-center justify-center bg-white">
+            <img src="5.png" alt="Soothing Toner" class="max-h-full object-contain" />
+          </div>
+          <div class="p-5">
+            <h4 class="font-semibold text-lg mb-2">Soothing Toner</h4>
+            <p class="text-sm text-gray-600 mb-4">Toner alami untuk menyeimbangkan pH kulit.</p>
+            <div class="flex justify-between items-center">
+              <span class="text-pink-600 font-bold">Rp 90.000</span>
+              <button class="bg-pink-500 text-white px-4 py-2 rounded hover:bg-pink-700 transition">Beli <i class="fas fa-shopping-cart ml-2"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Produk 5 -->
+        <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition transform hover:-translate-y-1">
+          <div class="h-60 flex items-center justify-center bg-white">
+            <img src="images.jpeg" alt="Daily Sunscreen" class="max-h-full object-contain" />
+          </div>
+          <div class="p-5">
+            <h4 class="font-semibold text-lg mb-2">Daily Sunscreen</h4>
+            <p class="text-sm text-gray-600 mb-4">Perlindungan maksimal dari sinar UV.</p>
+            <div class="flex justify-between items-center">
+              <span class="text-pink-600 font-bold">Rp 110.000</span>
+              <button class="bg-pink-500 text-white px-4 py-2 rounded hover:bg-pink-700 transition">Beli <i class="fas fa-shopping-cart ml-2"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Produk 6 -->
+        <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition transform hover:-translate-y-1">
+          <div class="h-60 flex items-center justify-center bg-white">
+            <img src="6.jpeg" alt="Sleeping Mask" class="max-h-full object-contain" />
+          </div>
+          <div class="p-5">
+            <h4 class="font-semibold text-lg mb-2">Sleeping Mask</h4>
+            <p class="text-sm text-gray-600 mb-4">Masker malam untuk kulit cerah keesokan hari.</p>
+            <div class="flex justify-between items-center">
+              <span class="text-pink-600 font-bold">Rp 180.000</span>
+              <button class="bg-pink-500 text-white px-4 py-2 rounded hover:bg-pink-700 transition">Beli <i class="fas fa-shopping-cart ml-2"></i></button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Testimoni Section -->
+   <div id="ulasan"></div>
+<section class="py-16 bg-white">
+  <div class="max-w-6xl mx-auto px-4">
+    <h3 class="text-2xl font-semibold mb-10 text-center text-pink-600">Apa Kata Mereka?</h3>
+    <div class="grid md:grid-cols-3 gap-8 text-gray-700">
+
+      <!-- Testimoni 1 -->
+      <div class="bg-pink-50 p-6 rounded-lg shadow hover:shadow-lg transition duration-300">
+        <p class="italic mb-4">"Kulitku jadi lebih cerah dan lembap setelah pakai produk dari Skintific. Benar-benar terasa perubahan nyata!"</p>
+        <div class="flex items-center gap-3">
+          <img src="https://i.pravatar.cc/50?img=11" alt="User 1" class="w-10 h-10 rounded-full" />
+          <div>
+            <p class="font-semibold">Ayu Rahma</p>
+            <p class="text-sm text-pink-500">Pelanggan setia</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimoni 2 -->
+      <div class="bg-pink-50 p-6 rounded-lg shadow hover:shadow-lg transition duration-300">
+        <p class="italic mb-4">"Aku suka banget karena cocok di kulit sensitifku dan gak bikin iritasi. Plus, wanginya juga lembut."</p>
+        <div class="flex items-center gap-3">
+          <img src="https://i.pravatar.cc/50?img=32" alt="User 2" class="w-10 h-10 rounded-full" />
+          <div>
+            <p class="font-semibold">Dina Oktaviani</p>
+            <p class="text-sm text-pink-500">Beauty Enthusiast</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimoni 3 -->
+      <div class="bg-pink-50 p-6 rounded-lg shadow hover:shadow-lg transition duration-300">
+        <p class="italic mb-4">"Skintific bikin skincare terasa lebih ilmiah tapi tetap praktis buat aku yang sibuk. Love it!"</p>
+        <div class="flex items-center gap-3">
+          <img src="https://i.pravatar.cc/50?img=45" alt="User 3" class="w-10 h-10 rounded-full" />
+          <div>
+            <p class="font-semibold">Fajar Nugraha</p>
+            <p class="text-sm text-pink-500">Customer sejak 2023</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+ <!-- Kontak Section -->
+  <section id="kontak" class="py-16 bg-pink-50">
+    <div class="max-w-4xl mx-auto px-4">
+      <h3 class="text-2xl font-semibold mb-6 text-center text-pink-600">Hubungi Kami</h3>
+      <form class="bg-white p-8 rounded-lg shadow-md space-y-6">
+        <div>
+          <label for="nama" class="block text-sm font-medium text-gray-700">Nama</label>
+          <input type="text" id="nama" class="mt-1 w-full border border-gray-300 rounded-md p-2 focus:ring-pink-500 focus:border-pink-500" placeholder="Nama Anda" />
+        </div>
+        <div>
+          <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+          <input type="email" id="email" class="mt-1 w-full border border-gray-300 rounded-md p-2 focus:ring-pink-500 focus:border-pink-500" placeholder="email@example.com" />
+        </div>
+        <div>
+          <label for="pesan" class="block text-sm font-medium text-gray-700">Pesan</label>
+          <textarea id="pesan" rows="4" class="mt-1 w-full border border-gray-300 rounded-md p-2 focus:ring-pink-500 focus:border-pink-500" placeholder="Tulis pesan Anda di sini..."></textarea>
+        </div>
+        <button type="submit" class="bg-pink-600 text-white px-6 py-2 rounded hover:bg-pink-700 transition">Kirim Pesan</button>
+      </form>
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+  <footer class="bg-white border-t py-4">
+    <div class="max-w-6xl mx-auto px-4 text-center text-sm text-gray-500">
+      &copy; 2025 GlowStore. Oyaaaa05
+    </div>
+  </footer>
+
+</body>
+</html>
